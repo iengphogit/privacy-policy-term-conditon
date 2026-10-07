@@ -8,7 +8,7 @@ Enable GitHub Pages under Settings → Pages → Deploy from a branch → main �
 
 Expected site: https://iengphogit.github.io/privacy-policy-term-conditon/
 
-Expected privacy URL: https://iengphogit.github.io/privacy-policy-term-conditon/privacy.html
+Expected privacy URL: https://iengphogit.github.io/privacy-policy-term-conditon/sketch-port-privacy-policy.html
 
 These addresses are only live after GitHub Pages deployment succeeds.
 
@@ -17,3 +17,5 @@ These addresses are only live after GitHub Pages deployment succeeds.
 The documents retain their draft labels. Original-app distribution license, launch-country review and full MVP1 paid/provider processing remain unresolved. Hosting does not certify legal compliance or store readiness. Keep the published policy, app-bundled copy and Play Data Safety consistent. Do not introduce unimplemented telemetry, tracking, account, retention or paid-feature claims.
 
 The app source is not included in this repository. The original app checkout and remote are unchanged.
+
+Primary filenames use the `sketch-port-` prefix. The old privacy.html, terms.html and education.html addresses redirect to the descriptive filenames to preserve existing links.
