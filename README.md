@@ -19,3 +19,5 @@ The documents retain their draft labels. Original-app distribution license, laun
 The app source is not included in this repository. The original app checkout and remote are unchanged.
 
 Primary filenames use the `sketch-port-` prefix. The old privacy.html, terms.html and education.html addresses redirect to the descriptive filenames to preserve existing links.
+
+Khmer policy translations are in `km/`, with links to English equivalents. Both remain drafts pending language and legal review. Nokora Regular/Bold fonts are bundled unmodified under SIL Open Font License 1.1; the original copyright and full license are in `licenses/Nokora-OFL-1.1.txt`. Fonts load from this site only.
