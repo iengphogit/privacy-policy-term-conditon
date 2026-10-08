@@ -1,23 +1,19 @@
 # SketchPORT legal documents
 
-Public HTML copies of the app-specific policy drafts for the current DeepSeek build. They describe ages 13+, optional direct AI requests, local workspace and protected API-key storage, consent, retention/deletion, and educational safety.
+Public HTML copies of the bundled EN/KM documents for SketchPORT 0.18. Operator: PHO ieng, an individual developer in Cambodia. Support and privacy: iengpho@gmail.com.
 
-## Hosting
+The documents describe the current app: educational use for ages 13+, local projects, optional direct DeepSeek requests, protected API-key storage, consent, retention/deletion and hardware safety. They do not advertise future PRO features. Publication does not certify legal compliance or Play approval.
 
-Enable GitHub Pages under Settings → Pages → Deploy from a branch → main → / (root).
+## Hosting and synchronization
 
-Expected site: https://iengphogit.github.io/privacy-policy-term-conditon/
+GitHub Pages: main branch, root folder.
 
-Expected privacy URL: https://iengphogit.github.io/privacy-policy-term-conditon/sketch-port-privacy-policy.html
+Privacy URL: https://iengphogit.github.io/privacy-policy-term-conditon/sketch-port-privacy-policy.html
 
-These addresses are only live after GitHub Pages deployment succeeds.
+Khmer privacy URL: https://iengphogit.github.io/privacy-policy-term-conditon/km/sketch-port-privacy-policy.html
 
-## Release status
+Generate the six HTML pages from the app assets with `scripts/export-store-policies.py` in the app repository, then copy the exported pages, fonts and licenses here. Keep the app copy, web copy and Play Data Safety declaration consistent. App code, signing materials and credentials do not belong in this repository.
 
-The documents retain their draft labels. Original-app distribution license, launch-country review and full MVP1 paid/provider processing remain unresolved. Hosting does not certify legal compliance or store readiness. Keep the published policy, app-bundled copy and Play Data Safety consistent. Do not introduce unimplemented telemetry, tracking, account, retention or paid-feature claims.
+Primary filenames use the `sketch-port-` prefix. Older privacy.html, terms.html and education.html addresses redirect to those filenames.
 
-The app source is not included in this repository. The original app checkout and remote are unchanged.
-
-Primary filenames use the `sketch-port-` prefix. The old privacy.html, terms.html and education.html addresses redirect to the descriptive filenames to preserve existing links.
-
-Khmer policy translations are in `km/`, with links to English equivalents. Both remain drafts pending language and legal review. Nokora Regular/Bold fonts are bundled unmodified under SIL Open Font License 1.1; the original copyright and full license are in `licenses/Nokora-OFL-1.1.txt`. Fonts load from this site only.
+Nokora Regular/Bold are bundled unmodified under SIL Open Font License 1.1, with the original copyright and full license in `licenses/Nokora-OFL-1.1.txt`. Fonts load from this site only. No advertising or analytics scripts are included.
