@@ -24,7 +24,8 @@ AirZcreen Desktop 0.1.0 is a separate free macOS app by PHO IENG, an individual 
 
 - [AirZcreen Desktop Privacy Policy](https://iengphogit.github.io/privacy-policy-term-conditon/airzcreen-desktop-privacy-policy.html)
 - [AirZcreen Desktop Support](https://iengphogit.github.io/privacy-policy-term-conditon/airzcreen-desktop-support.html)
+- [AirZcreen Desktop User Disclaimer](https://iengphogit.github.io/privacy-policy-term-conditon/airzcreen-desktop-disclaimer.html)
 
-These two static pages use system fonts, contain no JavaScript, trackers, forms, or external assets, and disclose GitHub Pages hosting separately from the local app. Existing SketchPORT documents remain specific to SketchPORT.
+These three static pages use system fonts, contain no JavaScript, trackers, forms, or external assets, and disclose GitHub Pages hosting separately from the local app. Existing SketchPORT documents remain specific to SketchPORT.
 
-To synchronize these pages, run `python3 scripts/export-store-pages.py <policy-repository>` in the AirZcreen Desktop source checkout. The privacy content comes from `Sources/AirZcreenDesktop/Legal/privacy.txt`, also packaged offline in the app. Support content comes from `Support/AppStore/support.txt`. Last synchronized: October 26, 2026. Publication does not indicate App Store approval.
+To synchronize these pages, run `python3 scripts/export-store-pages.py <policy-repository>` in the AirZcreen Desktop source checkout. The privacy and disclaimer content come from `Sources/AirZcreenDesktop/Legal/privacy.txt` and `Sources/AirZcreenDesktop/Legal/disclaimer.txt`, also packaged offline in the app. Support content comes from `Support/AppStore/support.txt`. Last synchronized: October 26, 2026. Publication does not indicate App Store approval.
