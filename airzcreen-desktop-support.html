@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>AirZcreen Desktop Support</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#182438;font:17px/1.75 system-ui,-apple-system,sans-serif}main{max-width:820px;margin:40px auto;padding:36px;background:white;border:1px solid #dde3ec;border-radius:16px}nav{font-size:15px;display:flex;gap:24px;flex-wrap:wrap}a{color:#145acb;text-underline-offset:3px;overflow-wrap:anywhere}h1{font-size:clamp(28px,5vw,38px);line-height:1.2;margin:32px 0 12px}h2{font-size:22px;line-height:1.4;margin-top:32px}p{margin:12px 0}.updated,footer{color:#526174;font-size:15px}footer{border-top:1px solid #dde3ec;margin-top:36px;padding-top:20px}@media(max-width:600px){main{margin:0;border:0;border-radius:0;padding:24px}}</style></head><body><main>
+<nav aria-label="AirZcreen Desktop"><a href="airzcreen-desktop-support.html">Support</a><a href="airzcreen-desktop-privacy-policy.html">Privacy Policy</a></nav>
+<h1>AirZcreen Desktop Support</h1><p class="updated">Updated: October 26, 2026 · Version 0.1.0</p>
+<h2>An extra desktop in your browser</h2>
+<p>AirZcreen Desktop is a free macOS app by PHO IENG, an individual developer in Cambodia. It creates an independent virtual display and sends its video to one paired browser on a trusted private network. It does not capture the physical display as a fallback. The browser is view-only: audio, remote keyboard/mouse control, SMS, accounts, and subscriptions are not included.</p>
+<h2>Connect your devices</h2>
+<p>Open the Mac app and use Start Virtual Display. Screen Recording permission is required; follow the app&#x27;s permission instructions in macOS System Settings. Connect the receiving device to the same trusted private network. Scan the QR code or open the local receiver address shown by the Mac app, then enter its six-digit pairing PIN in the browser. The QR code includes the address, not the PIN. Move a window onto the extra desktop to view it in the receiver.</p>
+<h2>Adjust the view</h2>
+<p>Choose 1280 × 720, 1920 × 1080, or 2560 × 1440 before starting. Target frame rates are 16, 24, 30, and 60 FPS; frame rate can change during a session. Actual performance depends on the network, hardware, and screen activity. Use Fit, zoom, pan, and the navigator in the browser. The watermark can be toggled in the Mac app.</p>
+<h2>Stop or disconnect</h2>
+<p>Disconnect in the Mac app revokes the paired browser and changes the PIN. The virtual display remains active until you select Stop Virtual Display. The emergency shortcut is Control + Option + Command + Escape. Stopping removes the owned virtual display and ends the stream.</p>
+<h2>If the browser cannot connect</h2>
+<p>Check that the Mac app is running and use the current address and PIN. Only one browser can be paired at a time; disconnect an existing viewer before trying another. Guest Wi-Fi, client isolation, VPNs, and network firewalls may prevent device-to-device connections. Use a trusted network that permits your devices to communicate. After too many incorrect PIN attempts, wait one minute before retrying. Do not expose the receiver using port forwarding or a public tunnel.</p>
+<h2>If the video is blank or slow</h2>
+<p>Check the app&#x27;s Screen Recording permission instructions and move a window onto the extra desktop. A blank independent display does not necessarily mean the connection failed. Try a lower resolution or target frame rate, and check the receiver&#x27;s connection statistics. Stop and restart the virtual display if the app reports a display or capture error. AirZcreen stops capture when its owned display becomes invalid instead of capturing another screen.</p>
+<h2>Compatibility and privacy</h2>
+<p>The current build targets macOS 14 or later. Actual verification to date covers macOS 26.2 on Apple silicon with Chrome; other supported configurations still need verification. WebRTC video transport is encrypted, but the local receiver page and pairing use unencrypted HTTP. Use trusted devices and a trusted private network. A receiving device can record or screenshot what it sees. Read the Privacy Policy for details.</p>
+<h2>Contact</h2>
+<p>Email <a href="mailto:iengpho@gmail.com">iengpho@gmail.com</a> for support or privacy requests. Include the app version, macOS and browser versions, and a description of the problem. If you send a screenshot, remove private information first. Do not send passwords, pairing PINs, or session credentials. The app does not automatically send support logs or screenshots.</p>
+<footer>© 2026 PHO IENG · Individual developer, Cambodia</footer>
+</main></body></html>
