@@ -29,3 +29,23 @@ AirZcreen Desktop 0.1.0 is a separate free macOS app by PHO IENG, an individual 
 These three static pages use system fonts, contain no JavaScript, trackers, forms, or external assets, and disclose GitHub Pages hosting separately from the local app. Existing SketchPORT documents remain specific to SketchPORT.
 
 To synchronize these pages, run `python3 scripts/export-store-pages.py <policy-repository>` in the AirZcreen Desktop source checkout. The privacy and disclaimer content come from `Sources/AirZcreenDesktop/Legal/privacy.txt` and `Sources/AirZcreenDesktop/Legal/disclaimer.txt`, also packaged offline in the app. Support content comes from `Support/AppStore/support.txt`. Last synchronized: October 26, 2026. Publication does not indicate App Store approval.
+
+## Thort (ថត)
+
+Thort 0.1.0 is an independent iPhone camera, composition and video-editing app by PHO IENG, Cambodia. Bundle ID: `space.iengpho.thort`. Support and privacy: iengpho@gmail.com.
+
+- [Thort document hub](https://iengphogit.github.io/privacy-policy-term-conditon/thort.html)
+- [Privacy Policy](https://iengphogit.github.io/privacy-policy-term-conditon/thort-privacy-policy.html)
+- [Terms & Conditions](https://iengphogit.github.io/privacy-policy-term-conditon/thort-terms-and-conditions.html)
+- [Khmer Privacy Policy](https://iengphogit.github.io/privacy-policy-term-conditon/km/thort-privacy-policy.html)
+- [Khmer Terms & Conditions](https://iengphogit.github.io/privacy-policy-term-conditon/km/thort-terms-and-conditions.html)
+
+These static pages explain local camera/microphone processing, clips and exports, selected IP camera connections, device-only Keychain credentials, deletion, responsible recording and device/network limitations. Support correspondence and GitHub Pages hosting are disclosed separately. The pages contain no JavaScript, forms or analytics and use the repository's local Nokora fonts and licence. Other projects' policies remain unchanged. Publication does not imply App Store release or approval.
+
+To regenerate after a reviewed app policy update:
+
+```sh
+python3 scripts/export-thort-policies.py /path/to/Thort-source-checkout
+```
+
+The internal app source directory is `UnifyCAM`. Core text comes from `UnifyCAM/Views/AboutView.swift` and `Localization/legal-km.json`; the exporter adds web/contact and external-camera-use disclosures. Review both languages and update the exporter date before publishing. Last synchronized: October 27, 2026.
