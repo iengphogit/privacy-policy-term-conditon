@@ -17,7 +17,7 @@ source = (app / 'UnifyCAM/Views/AboutView.swift').read_text()
 khmer = json.loads((app / 'Localization/legal-km.json').read_text())
 with (app / 'UnifyCAM/Resources/Info.plist').open('rb') as f:
     info = plistlib.load(f)
-version = info['CFBundleShortVersionString']
+version = re.search(r'MARKETING_VERSION = ([0-9.]+);', (app / 'UnifyCAM.xcodeproj/project.pbxproj').read_text()).group(1)
 updated = {'en': 'Updated: October 27, 2026', 'km': 'កែប្រែថ្ងៃទី 27 តុលា 2026'}
 contact = '<a href="mailto:iengpho@gmail.com">iengpho@gmail.com</a>'
 github = '<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>'
