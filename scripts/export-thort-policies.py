@@ -22,6 +22,8 @@ updated = {'en': 'Updated: October 27, 2026', 'km': 'កែប្រែថ្ង
 contact = '<a href="mailto:iengpho@gmail.com">iengpho@gmail.com</a>'
 github = '<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>'
 eula = '<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>'
+# Explicit language selects the local Khmer font in Safari as well as Chrome.
+khmer_brand = 'Thort (<span lang="km">ថត</span>)'
 
 def esc(text):
     return html.escape(text, quote=True)
@@ -34,7 +36,7 @@ def sections(kind, language):
     for title, body in re.findall(r'\.init\(title: "([^"]+)", text: "([^"]+)"\)', block.group(1)):
         if language == 'km':
             title, body = khmer[title]
-        result.append((title, esc(body)))
+        result.append((title, esc(body).replace("Thort (ថត)", khmer_brand)))
     assert len(result) >= 7
     return result
 
@@ -46,10 +48,10 @@ filenames = {'privacy': 'thort-privacy-policy.html', 'terms': 'thort-terms-and-c
 
 common = {
  'en': [
-  ('Developer and contact', 'Thort (ថត) is an independent iPhone camera, composition and video-editing app developed by PHO IENG, an individual developer in Cambodia. These documents describe version ' + esc(version) + '. Bundle ID: <code>space.iengpho.thort</code>. For support or privacy questions, contact ' + contact + '.'),
+  ('Developer and contact', khmer_brand + ' is an independent iPhone camera, composition and video-editing app developed by PHO IENG, an individual developer in Cambodia. These documents describe version ' + esc(version) + '. Bundle ID: <code>space.iengpho.thort</code>. For support or privacy questions, contact ' + contact + '.'),
  ],
  'km': [
-  ('អ្នកអភិវឌ្ឍ និងទំនាក់ទំនង', 'Thort (ថត) ជាកម្មវិធីកាមេរ៉ា រៀបចំប្លង់ និងកែវីដេអូឯករាជ្យសម្រាប់ iPhone ដែលអភិវឌ្ឍដោយ PHO IENG អ្នកអភិវឌ្ឍឯករាជ្យនៅកម្ពុជា។ ឯកសារទាំងនេះពន្យល់អំពីកំណែ ' + esc(version) + '។ Bundle ID៖ <code>space.iengpho.thort</code>។ សម្រាប់ជំនួយ ឬសំណួរឯកជនភាព សូមទាក់ទង ' + contact + '។'),
+  ('អ្នកអភិវឌ្ឍ និងទំនាក់ទំនង', khmer_brand + ' ជាកម្មវិធីកាមេរ៉ា រៀបចំប្លង់ និងកែវីដេអូឯករាជ្យសម្រាប់ iPhone ដែលអភិវឌ្ឍដោយ PHO IENG អ្នកអភិវឌ្ឍឯករាជ្យនៅកម្ពុជា។ ឯកសារទាំងនេះពន្យល់អំពីកំណែ ' + esc(version) + '។ Bundle ID៖ <code>space.iengpho.thort</code>។ សម្រាប់ជំនួយ ឬសំណួរឯកជនភាព សូមទាក់ទង ' + contact + '។'),
  ],
 }
 privacy_extra = {
@@ -78,7 +80,7 @@ terms_extra = {
 }
 
 def css(prefix):
-    return '''@font-face{font-family:Nokora;src:url("''' + prefix + '''fonts/Nokora-Regular.ttf") format("truetype");font-weight:400;font-display:swap}@font-face{font-family:Nokora;src:url("''' + prefix + '''fonts/Nokora-Bold.ttf") format("truetype");font-weight:700;font-display:swap}*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#17283b;font:17px/1.8 system-ui,-apple-system,sans-serif}html[lang=km] body,[lang=km]{font-family:Nokora,system-ui,sans-serif}main{max-width:850px;margin:40px auto;padding:36px;background:#fff;border:1px solid #dce5ef;border-radius:16px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:15px}a{color:#145acb;text-underline-offset:3px;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #145acb;outline-offset:4px}h1{font-size:clamp(29px,5vw,40px);line-height:1.45;margin:24px 0 12px}h2{font-size:22px;line-height:1.6;margin:30px 0 10px}p{margin:10px 0}code{overflow-wrap:anywhere;font-size:.92em}.eyebrow{color:#145acb;font-weight:700;margin-top:24px}.updated,footer{color:#526174;font-size:15px}footer{border-top:1px solid #dce5ef;margin-top:36px;padding-top:20px}.links{padding-left:24px}.links li{margin:14px 0}@media(max-width:600px){main{margin:0;border:0;border-radius:0;padding:24px 20px}}@media print{body{background:white}main{border:0;margin:0;padding:0}nav{display:none}a{color:inherit}}'''
+    return '''@font-face{font-family:Nokora;src:url("''' + prefix + '''fonts/Nokora-Regular.ttf") format("truetype");font-weight:400;font-display:swap}@font-face{font-family:Nokora;src:url("''' + prefix + '''fonts/Nokora-Bold.ttf") format("truetype");font-weight:700;font-display:swap}*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#17283b;font:17px/1.8 system-ui,-apple-system,sans-serif}html[lang=km] body,[lang=km]{font-family:Nokora,"Khmer Sangam MN","Khmer MN",system-ui,sans-serif}main{max-width:850px;margin:40px auto;padding:36px;background:#fff;border:1px solid #dce5ef;border-radius:16px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:15px}a{color:#145acb;text-underline-offset:3px;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #145acb;outline-offset:4px}h1{font-size:clamp(29px,5vw,40px);line-height:1.45;margin:24px 0 12px}h2{font-size:22px;line-height:1.6;margin:30px 0 10px}p{margin:10px 0}code{overflow-wrap:anywhere;font-size:.92em}.eyebrow{color:#145acb;font-weight:700;margin-top:24px}.updated,footer{color:#526174;font-size:15px}footer{border-top:1px solid #dce5ef;margin-top:36px;padding-top:20px}.links{padding-left:24px}.links li{margin:14px 0}@media(max-width:600px){main{margin:0;border:0;border-radius:0;padding:24px 20px}}@media print{body{background:white}main{border:0;margin:0;padding:0}nav{display:none}a{color:inherit}}'''
 
 def page(kind, language):
     prefix = '../' if language == 'km' else ''
@@ -88,13 +90,13 @@ def page(kind, language):
     body = common[language] + sections(kind, language)
     present = {title for title, _ in body}
     body += [(title, text) for title, text in (privacy_extra if kind == 'privacy' else terms_extra)[language] if title not in present]
-    content = '\n'.join('<section><h2>' + esc(title) + '</h2><p>' + text + '</p></section>' for title, text in body)
+    content = '\n'.join('<section><h2>' + esc(title).replace("Thort (ថត)", khmer_brand) + '</h2><p>' + text + '</p></section>' for title, text in body)
     return f'''<!doctype html>
 <html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Thort (ថត) — {esc(label[kind])}</title><style>{css(prefix)}</style></head><body><main>
 <nav aria-label="Thort"><a href="{prefix}thort.html">{esc(label['home'])}</a><a href="{filenames['privacy']}">{esc(label['privacy'])}</a><a href="{filenames['terms']}">{esc(label['terms'])}</a><a href="{alternate}" lang="{'en' if language == 'km' else 'km'}">{label['locale']}</a></nav>
-<p class="eyebrow">Thort (ថត)</p><h1>{esc(label[kind])}</h1><p class="updated">{updated[language]} · {esc(version)}</p>
+<p class="eyebrow">{khmer_brand}</p><h1>{esc(label[kind])}</h1><p class="updated">{updated[language]} · {esc(version)}</p>
 {content}
 <footer>© 2026 PHO IENG · Cambodia<br>Nokora · Copyright 2019 The Nokora Project Authors · <a href="{prefix}licenses/Nokora-OFL-1.1.txt">SIL Open Font License 1.1</a></footer>
 </main></body></html>
@@ -108,7 +110,7 @@ for language in ['en', 'km']:
 
 hub = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'"><title>Thort (ថត) — Privacy & Terms</title><style>{css('')}</style></head><body><main>
-<p class="eyebrow">Thort@Cambodia</p><h1>Thort (ថត)</h1><p>Camera composition and recording for iPhone. Developed by PHO IENG.</p><p class="updated">Documents for version {esc(version)} · October 27, 2026<br>Bundle ID: <code>space.iengpho.thort</code></p>
+<p class="eyebrow">Thort@Cambodia</p><h1>{khmer_brand}</h1><p>Camera composition and recording for iPhone. Developed by PHO IENG.</p><p class="updated">Documents for version {esc(version)} · October 27, 2026<br>Bundle ID: <code>space.iengpho.thort</code></p>
 <section lang="en"><h2>English</h2><ul class="links"><li><a href="thort-privacy-policy.html">Privacy Policy</a></li><li><a href="thort-terms-and-conditions.html">Terms &amp; Conditions</a></li></ul></section>
 <section lang="km"><h2>ភាសាខ្មែរ</h2><ul class="links"><li><a href="km/thort-privacy-policy.html">គោលការណ៍ឯកជនភាព</a></li><li><a href="km/thort-terms-and-conditions.html">លក្ខខណ្ឌប្រើប្រាស់</a></li></ul></section>
 <p>Support and privacy: {contact}</p><p class="updated">These documents describe the app’s current behavior. Publication does not indicate an App Store release or approval.</p>
