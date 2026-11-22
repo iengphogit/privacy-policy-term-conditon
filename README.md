@@ -49,3 +49,14 @@ python3 scripts/export-thort-policies.py /path/to/Thort-source-checkout
 ```
 
 The internal app source directory is `UnifyCAM`. Core text comes from `UnifyCAM/Views/AboutView.swift` and `Localization/legal-km.json`; the exporter adds web/contact and external-camera-use disclosures. Review both languages and update the exporter date before publishing. Last synchronized: October 27, 2026.
+
+## ONEC Desktop
+
+ONEC Desktop 0.1.0-beta.1 is a free Windows desktop app by PHO IENG, an individual developer in Cambodia, distributed through the Microsoft Store. It is a beta for learning and research. Support and privacy: iengpho@gmail.com.
+
+- [ONEC Desktop Privacy Policy](https://iengphogit.github.io/privacy-policy-term-conditon/onec-desktop-privacy-policy.html)
+- [ONEC Desktop Terms & Conditions](https://iengphogit.github.io/privacy-policy-term-conditon/onec-desktop-terms-and-conditions.html)
+- [ONEC Desktop Support](https://iengphogit.github.io/privacy-policy-term-conditon/onec-desktop-support.html)
+
+These three static pages use system fonts and contain no JavaScript, forms, trackers or external assets. They describe local storage of projects, chats and keys, what is sent to the model providers, agents and hosts the person sets up, approvals, deletion and the Microsoft Store. Other projects' policies remain unchanged. Publication does not imply Microsoft Store approval.
+
